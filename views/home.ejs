@@ -1,0 +1,65 @@
+<%- include('./partials/header') %>
+
+<section class="container">
+    <h1 class="is-size-2">Movies</h1>
+    <div class="movies-wrapper is-flex">
+       
+            <% if (movies.length!=0) { %>
+                <% movies.forEach((movie)=>{  %>
+                <div class="card mx-1" id=<%=movie._id%>>
+                    <div class="card-image">
+                    </div>
+                    <div class="card-content">
+                      <div class="media">
+                        <div class="media-content">
+                          <p id="movieId" hidden="true" ><%=movie._id%></p>
+                          <p class="title is-size-4"><%=movie.name%></p>
+                          <p class="subtitle is-size-5"><%=movie.director%></p>
+                        </div>
+                      </div> 
+                      <div class="content">
+                        <%=movie.clasification.name%>
+                      </div>                    
+                    </div>
+                    <footer class="card-footer">
+                        <a id="" class="card-footer-item editMovieBtn" data-cardId=<%=movie._id%>>Edit</a>
+                        <a id="" class="card-footer-item deleteMovieBtn" data-cardId=<%=movie._id%>>Delete</a>
+                        <a id="" class="card-footer-item saveMovieBtn" data-cardId=<%=movie._id%>>Save</a>
+                      </footer>
+                  </div>
+                  <%})%>
+              <% }else{ %>
+                <h2 class="is-size-5">No movies yet</h2>
+                <% } %>
+        
+    </div>
+</section>
+
+<section class="container">
+    <h1 class="is-size-2">Clasifications</h1>
+    <div class="clasifications-wrapper is-flex ">
+            <% if (clasifications.length!=0) { %>
+                <% clasifications.forEach((clasification)=>{  %>
+                <div class="card mx-1" id=<%=clasification._id%>>
+                    <div class="card-content">
+                      <div class="media">
+                        <div class="media-content">
+                          <p class="title is-5"><%=clasification.name%></p>
+                          <p hidden="true" class="subtitle is-6"><%=clasification._id%></p>
+                        </div>
+                      </div>
+                    </div>
+                    <footer class="card-footer">
+                        <a id="" class="card-footer-item editClasificationBtn" data-clasificationid=<%=clasification._id%>>Edit</a>
+                        <a id="" class="card-footer-item deleteClasificationBtn"  data-clasificationid=<%=clasification._id%>>Delete</a>
+                        <a id="" class="card-footer-item saveClasificationBtn" data-clasificationid=<%=clasification._id%>>Save</a>
+                      </footer>
+                  </div>
+                  <%})%>
+              <% }else{ %>
+                <h2 class="is-size-5">No clasifications yet</h2>
+                <% } %>
+    </div>
+</section>
+
+<%- include('./partials/footer') %>

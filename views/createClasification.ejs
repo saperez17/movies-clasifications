@@ -1,0 +1,14 @@
+<%- include('./partials/header') %>
+<form onsubmit="(event)=>{event.preventDefault()}">
+    <div class="field">
+        <label class="label">Name</label>
+        <div class="control">
+          <input id="nameInput" class="input" type="text" name="name" placeholder="Movie name">
+        </div>
+    </div>
+
+    <button id="sendBtn" type="submit" class="button is-primary">Create</button>
+
+</form>
+
+<%- include('./partials/footer') %>
