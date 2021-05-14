@@ -13,4 +13,4 @@ Para instalar y correr el proyecto de forma local se debe:
   </ul>
 <h2>Wordpress shortcode plugin</h2>
 El codigo contenido en el archivo functions.php contiene el codigo fuente del shorcode. Este se debe agregar al archivo functions.php del proyecto wordpress. Luego de esto es
-posible utilizarlo de la forma: [holamundo] [/holamundo]
+posible utilizarlo de la forma: [holamundo] -> <h1>Hola Mundo</h1>
